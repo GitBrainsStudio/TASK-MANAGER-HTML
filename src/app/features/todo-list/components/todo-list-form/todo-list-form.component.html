@@ -7,19 +7,17 @@
 
     <ng-container *ngIf="todoList.Tasks.length > 0">
         <div class="row mt-5" >
-            <mat-chip-list aria-label="Fish selection">
-                <span 
-                    *ngFor="let chip of taskFilterChips" 
-                    [ngClass]="{ 'selected-chip' : chip.Selected }" 
-                    class="chip" 
-                    (click)="chipSelected(chip)">
-                    {{ chip.Text }}
-                </span>
-            </mat-chip-list>
+            <span 
+            *ngFor="let chip of taskFilterChips" 
+            [ngClass]="{ 'selected-chip' : chip.Selected }" 
+            class="chip" 
+            (click)="chipSelected(chip)">
+            {{ chip.Text }}
+        </span>
         </div>
 
         <hr>
-        <mat-card *ngFor="let task of todoListTasks" class="mb-2">
+        <mat-card *ngFor="let task of todoListTasks" class="mb-2" @opacityAnimation>
             <div class="row justify-content-between p-1" >
     
                 {{ task.Name }}
