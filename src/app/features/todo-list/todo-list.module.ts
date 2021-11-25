@@ -8,8 +8,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatChipsModule } from '@angular/material/chips';
 import { TodoListTaskNewFormComponent } from './components/todo-list-task-new-form/todo-list-task-new-form.component';
 import { TodoListTaskNewFormService } from './services/todo-list-task-new-form.service';
 
@@ -29,7 +29,7 @@ import { TodoListTaskNewFormService } from './services/todo-list-task-new-form.s
     MatButtonModule,
     MatCardModule,
     MatCheckboxModule,
-    MatChipsModule
+    MatSnackBarModule
   ],
   exports:[
     TodoListFormComponent,

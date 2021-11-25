@@ -3,7 +3,9 @@
 
     <div class="container d-flex justify-content-center align-items-center p-3 mt-5">
         <div *ngIf="todoListDetailsPageService.todoList" class="todo-list">
-            <app-todo-list-form [todoList]="todoListDetailsPageService.todoList"></app-todo-list-form>
+            <app-todo-list-form 
+            [todoList]="todoListDetailsPageService.todoList"
+            (todoListUpdated)="todoListDetailsPageService.updateTodoList($event)"></app-todo-list-form>
         </div>
     </div>
 

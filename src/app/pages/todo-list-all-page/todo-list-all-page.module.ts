@@ -21,7 +21,6 @@ import { MatButtonModule } from '@angular/material/button';
     MatCardModule,
     MatBottomSheetModule,
     MatButtonModule
-  ],
-  providers: [TodoListAllPageService]
+  ]
 })
 export class TodoListAllPageModule { }

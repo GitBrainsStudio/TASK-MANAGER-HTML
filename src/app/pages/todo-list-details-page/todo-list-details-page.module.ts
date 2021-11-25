@@ -24,8 +24,5 @@ import { TodoListDetailsPageService } from 'src/app/features/todo-list/services/
     MatBottomSheetModule,
     MatButtonModule
   ],
-  providers: [
-    TodoListDetailsPageService
-  ]
 })
 export class TodoListDetailsPageModule { }
