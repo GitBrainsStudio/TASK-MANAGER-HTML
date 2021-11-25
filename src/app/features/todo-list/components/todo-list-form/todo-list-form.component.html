@@ -1,0 +1,46 @@
+<ng-container *ngIf="todoList">
+
+    <div class="row p-1 justify-content-center">
+        <span>Name:</span> {{ todoList.Name }}
+    </div>
+
+
+    <ng-container *ngIf="todoList.Tasks.length > 0">
+        <div class="row mt-5" >
+            <mat-chip-list aria-label="Fish selection">
+                <span 
+                    *ngFor="let chip of taskFilterChips" 
+                    [ngClass]="{ 'selected-chip' : chip.Selected }" 
+                    class="chip" 
+                    (click)="chipSelected(chip)">
+                    {{ chip.Text }}
+                </span>
+            </mat-chip-list>
+        </div>
+
+        <hr>
+        <mat-card *ngFor="let task of todoListTasks" class="mb-2">
+            <div class="row justify-content-between p-1" >
+    
+                {{ task.Name }}
+    
+                 <mat-checkbox [(ngModel)]="task.Completed" (change)="taskStatusChanged(task)"></mat-checkbox>
+            </div>
+        </mat-card>
+    </ng-container>
+
+
+    <div class="row justify-content-center">
+        <button mat-raised-button color="primary" (click)="openTaskNewFormButtomSheet()">
+            <ng-container *ngIf="todoList.Tasks.length > 0; else ifNotTaskButtonMessage">
+               Add task
+            </ng-container>
+        </button>
+    </div>
+
+    
+</ng-container>
+
+<ng-template #ifNotTaskButtonMessage>
+    Add your first task now
+</ng-template>

@@ -1,0 +1,12 @@
+<h2>New task</h2>
+
+<form [formGroup]="taskNewForm" (ngSubmit)="create()" *ngIf="taskNewForm">
+    <mat-form-field appearance="outline">
+        <input matInput placeholder="Apple, Meat, Milk, etc." formControlName="Name">
+        <mat-hint>[Validators.required, Validators.minLength(5), Validators.maxLength(80)]]</mat-hint>
+    </mat-form-field>
+
+    <div class="row justify-content-end">
+        <button mat-raised-button color="primary" type="submit" [disabled]="!taskNewForm.valid">Create</button>
+    </div>
+</form>

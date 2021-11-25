@@ -1,0 +1,12 @@
+<h2>New todo-list</h2>
+
+<form [formGroup]="todoListNewForm" (ngSubmit)="create()" *ngIf="todoListNewForm">
+    <mat-form-field appearance="outline">
+        <input matInput placeholder="Homeworks, Shoppings, Others, etc." formControlName="Name">
+        <mat-hint>[ Validators.minLength(5), Validators.maxLength(30) ]</mat-hint>
+    </mat-form-field>
+
+    <div class="row justify-content-end">
+        <button mat-raised-button color="primary" type="submit" [disabled]="!todoListNewForm.valid">Create</button>
+    </div>
+</form>

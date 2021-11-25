@@ -1,0 +1,32 @@
+span
+{
+    color: gray;
+}
+
+.chip
+{
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgba(128, 128, 128, 0.349);
+    margin-right: 5px;
+    font-size: 12px;
+    transition: .8s;
+}
+
+.chip:hover
+{
+    background-color: rgba(255, 166, 0, 0.459);
+    cursor: pointer;
+    transition: .8s;
+}
+
+.chip:last-child
+{
+    margin-right: 0;
+}
+
+.selected-chip
+{
+    background-color: orange;
+    color: #333;
+}
